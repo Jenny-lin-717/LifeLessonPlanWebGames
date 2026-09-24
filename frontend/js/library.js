@@ -125,6 +125,7 @@ async function addTag(rawName) {
   const name = rawName.trim();
   s.addingTheme = false;
   if (!name) {
+    s.error = "請輸入分類名稱";
     render();
     return;
   }
