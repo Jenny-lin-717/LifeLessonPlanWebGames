@@ -230,6 +230,7 @@ function homePage() {
     {},
     el("p", { class: "eyebrow", text: "首頁" }),
     el("h2", { text: `你好，${name}` }),
+    s.error ? el("p", { class: "error", text: s.error }) : null,
     el("p", { class: "muted", text: "左邊「素材庫」可以管理各遊戲的分類與素材。" }),
   );
 }
