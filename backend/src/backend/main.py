@@ -39,7 +39,7 @@ class LoginRequest(BaseModel):
 @app.get("/api/health")
 def health() -> dict[str, str]:
     """確認服務已啟動。不連線資料庫。"""
-    return {"status": "ok"}
+    return {"status": "ok", "service": "LifeLessonPlan"}
 
 
 @app.get("/api/db-check")
