@@ -258,6 +258,11 @@ function renderContent() {
 
 async function signIn() {
   s.error = "";
+  if (!s.loginDraft.username.trim() || !s.loginDraft.password) {
+    s.error = "請先填寫帳號和密碼";
+    render();
+    return;
+  }
   let result;
   try {
     result = await api("/api/auth/login", {
